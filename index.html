@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>QR code Generator</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container">
+          <div class="card my-5 border-danger">
+               <div class="card-header">
+                    <h2 class="text-center font-monospace">QR Code Generator</h2>
+               </div>
+               <div class="card-body mx-5">
+                    <p class="card-text fw-bold font-monospace fs-4 text-center">Enter your text to generate a QR Code and download the image</p>
+                    <div class="row justify-content-center">
+                         <img src="img/qr.jpg" alt="" class="img-fluid" style="max-width: 450px;">
+                    </div>
+                    <form action="" class="mt-4" id="form">
+                         <div class="row mb-4 justify-content-center">
+                              <label for="text" class="col-sm-2 col-form-label">Text</label>
+                              <div class="col-sm-5">
+                                   <input type="text" class="form-control" name="text" id="text" placeholder="Enter text to be encrypt in QR code">
+                              </div>    
+                         </div>
+                         <div class="row mb-5 justify-content-center">
+                              <label for="text" class="col-sm-2 col-form-label">QR size</label>
+                              <div class="col-sm-5">
+                                   <select name="qr-size" id="qr-size" class="form-select">
+                                        <option value="100">100 x 100</option>
+                                        <option value="200">200 x 200</option>
+                                        <option value="300" selected>300 x 300</option>
+                                        <option value="400">400 x 400</option>
+                                        <option value="500">500 x 500</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <div class="text-center justify-content-center my-4">
+                              <div class="spinner-border text-danger visually-hidden" role="status" style="width: 50px; height: 50px;" id="spinner"></div>
+                              <div class="d-flex justify-content-center visually-hidden mb-5" id="qr-code"></div>
+                         </div>
+                         <div class="row justify-content-center">
+                              <button class="btn btn-danger text-center w-auto me-3" id="generate-qr">Generate QR</button>
+                              <a class="btn btn-danger text-center w-auto" id="download-qr" download="QR.png">download QR</a>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+     <script src="js/main.js" defer></script>
+</body>
+</html>
